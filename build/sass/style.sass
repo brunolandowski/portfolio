@@ -1,0 +1,101 @@
+body
+  background: #fff
+
+#container
+  text-align: center
+  margin: 100px auto
+  width: 100px
+  background: pink
+
+#frame
+  
+  -moz-transform-style: preserve-3d
+  -webkit-transform-style: preserve-3d
+  transform-style: preserve-3d
+  -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px)
+  -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px)
+  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px)
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px)
+  background: purple
+
+.strip
+  background: red
+  -webkit-animation: spin 30s infinite linear
+  -moz-animation: spin 30s infinite linear
+  -o-animation: spin 30s infinite linear
+  -moz-transform-style: preserve-3d
+  -webkit-transform-style: preserve-3d
+  transform-style: preserve-3d
+  font-size: 50px
+  font-family: arial
+ 
+  div
+    position: absolute
+    width: 200px
+    height: 500px
+    background: yellow
+    border: 10px solid white
+    opacity: 1
+  .strip-1
+    background-position: 0 0
+    -moz-transform: rotateY(0deg) translateZ(500px)
+    -ms-transform: rotateY(0deg) translateZ(500px)
+    -webkit-transform: rotateY(0deg) translateZ(500px)
+    transform: rotateY(0deg) translateZ(500px)
+  .strip-2
+    background-position: 710px 0
+    -moz-transform: rotateY(45deg) translateZ(317.30989px)
+    -ms-transform: rotateY(45deg) translateZ(317.30989px)
+    -webkit-transform: rotateY(45deg) translateZ(317.30989px)
+    transform: rotateY(45deg) translateZ(317.30989px)
+  .strip-3
+    background-position: 460px 0
+    -moz-transform: rotateY(90deg) translateZ(317.30989px)
+    -ms-transform: rotateY(90deg) translateZ(317.30989px)
+    -webkit-transform: rotateY(90deg) translateZ(317.30989px)
+    transform: rotateY(90deg) translateZ(317.30989px)
+  .strip-4
+    background-position: 210px 0
+    -moz-transform: rotateY(135deg) translateZ(317.30989px)
+    -ms-transform: rotateY(135deg) translateZ(317.30989px)
+    -webkit-transform: rotateY(135deg) translateZ(317.30989px)
+    transform: rotateY(135deg) translateZ(317.30989px)
+  .strip-5
+    background-position: -40px 0
+    -moz-transform: rotateY(180deg) translateZ(317.30989px)
+    -ms-transform: rotateY(180deg) translateZ(317.30989px)
+    -webkit-transform: rotateY(180deg) translateZ(317.30989px)
+    transform: rotateY(180deg) translateZ(317.30989px)
+  .strip-6
+    background-position: -290px 0
+    -moz-transform: rotateY(225deg) translateZ(317.30989px)
+    -ms-transform: rotateY(225deg) translateZ(317.30989px)
+    -webkit-transform: rotateY(225deg) translateZ(317.30989px)
+    transform: rotateY(225deg) translateZ(317.30989px)
+  .strip-7
+    background-position: -540px 0
+    -moz-transform: rotateY(270deg) translateZ(317.30989px)
+    -ms-transform: rotateY(270deg) translateZ(317.30989px)
+    -webkit-transform: rotateY(270deg) translateZ(317.30989px)
+    transform: rotateY(270deg) translateZ(317.30989px)
+  .strip-8
+    background-position: -790px 0
+    -moz-transform: rotateY(315deg) translateZ(317.30989px)
+    -ms-transform: rotateY(315deg) translateZ(317.30989px)
+    -webkit-transform: rotateY(315deg) translateZ(317.30989px)
+    transform: rotateY(315deg) translateZ(317.30989px)
+
+@-moz-keyframes spin
+  from
+    -moz-transform: rotateY(0)
+
+  to
+    -moz-transform: rotateY(-360deg)
+
+
+@-webkit-keyframes spin
+  from
+    -webkit-transform: rotateY(0)
+
+  to
+    -webkit-transform: rotateY(-360deg)
