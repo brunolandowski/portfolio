@@ -1,5 +1,5 @@
-/* Coded by Eren SOYLU @ 2016 
-This frontend aims getting data from Google Spreadsheets with .getJSON method and uses that data in jQuery DataTables
+/* 
+Google SpreadSheet
 */
 $(document).ready(function() {
       var tableArray = [];
@@ -12,12 +12,46 @@ $(document).ready(function() {
           iArray.push('<a href="'+json.feed.entry[i].gsx$url.$t+ '">URL</a>');
           tableArray.push(iArray);
           
-          $("#wrap").append("<h2>" + json.feed.entry[i].gsx$name.$t + "</h2>");
-          $("#wrap").append("<h2>" + json.feed.entry[i].gsx$vid.$t + "</h2>");
-          $("#wrap").append('<img src="' + json.feed.entry[i].gsx$url.$t + '" class="img2 img-responsive">');
+          $("#container").append('<article><div class="content"><h2>' + json.feed.entry[i].gsx$name.$t + '</h2><h3>' + json.feed.entry[i].gsx$aside.$t + '</h3></div><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><video autoplay loop poster="' + json.feed.entry[i].gsx$urlimg.$t + '"> <source src="' + json.feed.entry[i].gsx$urlvid.$t + '" type="video/mp4" /></video></div><div class="flip-box-back" style="background-color:' + json.feed.entry[i].gsx$color.$t + ';"></div></div></div></article>');
+        
           
         }
        
-      });
+      })
+       .done(function() {
+        console.log( "second success" );
+      })
+      ;
     
 });
+
+
+ var text = new Blotter.Text("molo", {
+        family : "Fivo Sans Modern",
+        size : 400,
+        fill : "#fff",
+        weight : 900,
+        paddingRight : 300,
+        paddingLeft : 200,
+       
+      });
+
+      var material = new Blotter.LiquidDistortMaterial();
+// setting for speed twisting motion
+// it is a float variable between 0.0 ~ 1.0
+material.uniforms.uSpeed.value = 0.1;
+
+material.uniforms.uSeed.value = 20;
+
+
+// setting untuk distorsi liukan gelombang
+// it is a float variable between 0.0 ~ 1.0
+material.uniforms.uVolatility.value = 0.4;
+
+      var blotter = new Blotter(material, { texts : text });
+
+      var scope = blotter.forText(text);
+
+
+// we will display it in element 'satu' in html
+scope.appendTo(satu);

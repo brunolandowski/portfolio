@@ -5,17 +5,29 @@ html(lang="en")
 		meta(charset="utf-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
 		link(rel="icon" href="")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css")
 		link(rel="stylesheet" href="css/style.css")
 
+
 	body
+
 		include ./header.jade
+		
+		section#intro
+			
+		
+			
+		
+		section#wrap
+			div#container
 
-		h1 Portfolio
-
-		div#wrap
-			Hello Wolrd
+		section#info
+			include ./about.jade
+			
 		
 		include ./footer.jade
 
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.min.js")
 		script(src="js/main.js")
