@@ -2,6 +2,16 @@
 Google SpreadSheet
 */
 $(document).ready(function() {
+   var docHeight = $(document).height(),
+  scrollPercent;
+
+  $(window).scroll(function() {
+    scrollPercent = ($(window).scrollTop() / docHeight) * 100;
+
+    $('#scroll-pro').width(scrollPercent + '%');
+    });
+
+
       var tableArray = [];
       /* First parameter in .getJSON method is published google spreadsheet's modified link for getting data formed with JSON. Tricky key is putting key between link template over here : https://spreadsheets.google.com/feeds/list/PUT-KEY_HERE/od6/public/values?alt=json  | You might be get key when you published your data spreadsheet. The key inside the URL. After getting JSON object you can investigate which key represent data. In this example json.feed.entry is an array that includes my data. Your solution should look similar like that.
       */
@@ -26,7 +36,7 @@ $(document).ready(function() {
 });
 
 
- var text = new Blotter.Text("molo", {
+ var text = new Blotter.Text("Molo", {
         family : "Fivo Sans Modern",
         size : 400,
         fill : "#fff",

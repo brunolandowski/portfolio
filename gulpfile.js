@@ -33,7 +33,7 @@ gulp.task('jade', () => {
 });
 
 gulp.task('sass', () => {
-	return gulp.src(paths.sass + '/style.sass')
+	return gulp.src(paths.sass + '/style.scss')
 		.pipe(sass({
 			includePaths: [paths.sass],
 			outputStyle: 'compressed'
@@ -53,7 +53,7 @@ gulp.task('browser-reload', ()=> {
 });
 
 gulp.task('watch', () => {
-	gulp.watch(paths.sass + '/*.sass', ['sass']);
+	gulp.watch(paths.sass + '/*.scss', ['sass']);
 	gulp.watch(paths.jade + '/*.jade', ['jade-rebuild']);
 	gulp.watch(paths.js + '/*.js', ['browser-reload']);
 });
