@@ -63,7 +63,7 @@ body {
 			margin: 100px;
 		}
 		&#intro {
-			margin-bottom: 150px;
+			
 		}
 		&#info {
 			#col_2 {
@@ -87,6 +87,7 @@ body {
 
 			}
 			#col_3 {
+				width:calc(50% - 50px);
 				margin:100px 0;
 				display: grid;
 				grid-template-columns: repeat(3, 1fr);
