@@ -72,6 +72,9 @@ body {
 				grid-column-gap: 50px;
   				grid-row-gap: 50px;
 				.para {
+					a {
+						text-decoration: underline;
+					}
 					h2 {
 						vertical-align: top;
 						
@@ -104,6 +107,7 @@ body {
 	}
 	
 	article {
+		cursor: pointer;
 		margin: 50px 0;
 		padding-bottom: 50px;
 		border-bottom: 1px solid $white;
@@ -197,11 +201,4 @@ body {
 		font-size: 30px;
 		text-decoration: underline;
 	}
-}
-
-#scroll-pro {
-	height:5px;
-	background:white;
-	position:fixed;
-	bottom:0;
 }
