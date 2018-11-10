@@ -30,6 +30,23 @@ $url_4: url(hinted-FivoSansModern-Medium.svg#FivoSansModern-Medium);
 	backface-visibility: hidden;
 }
 
+.link {
+	color:white;
+
+}
+
+.press {
+	width:300px;
+	height:300px;
+	background:red;
+}
+
+a.pressure {
+	user-select: none;
+	@media screen and (max-width: $mobil) {
+    	
+  	}
+}
 
 @font-face {
 	font-family: $font_0;
@@ -145,7 +162,38 @@ body {
   			}
 			display: inline-block;
 		}
-		&:hover {
+		@media screen and (max-width: $middle) {
+			&:hover {
+				.content {
+					z-index: 9;
+					position: sticky;
+				}
+				.flip-box {
+					bottom: 0;
+					.flip-box-inner {
+						//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+						transform: rotateX(180deg);
+					}
+				}
+			}
+		}
+		@media screen and (min-width: 961px) {
+			&:hover {
+				.content {
+					z-index: 9;
+					position: sticky;
+				}
+				.flip-box {
+					bottom: 25%;
+					.flip-box-inner {
+						//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+						transform: rotateX(360deg);
+					}
+				}
+			}
+		}
+		
+		&.hover {
 			.content {
 				z-index: 9;
 				position: sticky;
@@ -224,3 +272,4 @@ body {
 		text-decoration: underline;
 	}
 }
+
